@@ -1,0 +1,11 @@
+{
+    "name": "ezsystems/marketing-automation-bundle",
+    "description": "eZ Platform Marketing Automation"
+    "authors": [
+        {
+            "name": "eZ Systems",
+            "email": "dev-team@ez.no"
+        }
+    ],
+    "require": {}
+}

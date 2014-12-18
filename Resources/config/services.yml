@@ -1,0 +1,4 @@
+services:
+#    ez_systems_marketing_automation.example:
+#        class: EzSystems\MarketingAutomationBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

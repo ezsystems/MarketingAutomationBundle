@@ -1,0 +1,3 @@
+ez_systems_marketing_automation_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EzSystemsMarketingAutomationBundle:Default:index }
