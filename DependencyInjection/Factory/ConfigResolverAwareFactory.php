@@ -36,4 +36,11 @@ class ConfigResolverAwareFactory
             $this->configResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
         );
     }
+
+    public function buildCustomTagConverter()
+    {
+        return new PreConverter(
+            $this->configResolver->getParameter( 'FormSettings.Hostname', 'ezma' )
+        );
+    }
 }

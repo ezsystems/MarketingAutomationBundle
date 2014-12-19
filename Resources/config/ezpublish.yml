@@ -1,0 +1,6 @@
+system:
+    default:
+        fieldtypes:
+            ezxml:
+                custom_tags:
+                    - { path: "%kernel.root_dir%/../src/EzSystems/MarketingAutomationBundle/Resources/views/xmltext/custom_tag.xsl" }
