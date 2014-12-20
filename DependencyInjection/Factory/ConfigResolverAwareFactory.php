@@ -7,23 +7,23 @@
  */
 namespace EzSystems\MarketingAutomationBundle\DependencyInjection\Factory;
 
-use eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver;
+use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use EzSystems\MarketingAutomationBundle\EventListener\TrackerListener;
 
 /**
  * Factory for services that depend on a legacy configuration variable
  */
-class LegacyConfigurationAwareFactory
+class ConfigResolverAwareFactory
 {
-    /** @var \eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver $legacyConfigResolver */
-    protected $legacyConfigResolver;
+    /** @var \eZ\Publish\Core\MVC\ConfigResolverInterface $configResolver */
+    protected $configResolver;
 
     /**
-     * @param \eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver $legacyConfigResolver
+     * @param \eZ\Publish\Core\MVC\ConfigResolverInterface $configResolver
      */
-    public function __construct( LegacyConfigResolver $legacyConfigResolver )
+    public function __construct( ConfigResolverInterface $configResolver )
     {
-        $this->legacyConfigResolver = $legacyConfigResolver;
+        $this->configResolver = $configResolver;
     }
 
     /**
@@ -32,7 +32,7 @@ class LegacyConfigurationAwareFactory
     public function buildTrackerListener()
     {
         return new TrackerListener(
-            $this->legacyConfigResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
+            $this->configResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
         );
     }
 }

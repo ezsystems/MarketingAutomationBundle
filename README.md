@@ -28,3 +28,8 @@ See the LICENSE file that ships at the root of this bundle.
 2. run `composer update ezsystems/marketing-automation-bundle`.
 
 3. Add `new EzSystems\MarketingAutomationBundle\EzSystemsMarketingAutomationBundle()` to your kernel (`ezpublish/EzPublishKernel.php`).
+
+## Features
+
+### Automatic tracker code integration
+The Marketing Automation tracking code will automatically be added before the closing body tag.
