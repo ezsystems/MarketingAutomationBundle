@@ -16,7 +16,7 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="concat('MAform-', @custom:form_id)"/>
             </xsl:attribute>
-            <script type="text/javascript" src="http://blabla.com/form.js">
+            <script type="text/javascript" src="">
                 <xsl:attribute name="src">
                     <xsl:value-of select="concat('http://', @custom:hostname, '/', @custom:form_id, '/form.js')"></xsl:value-of>
                 </xsl:attribute>
