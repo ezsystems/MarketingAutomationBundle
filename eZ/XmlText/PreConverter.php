@@ -19,7 +19,7 @@ class PreConverter implements XmlTextConverter
 {
     protected $hostName;
 
-    public function __construct( $hostName )
+    public function __construct($hostName)
     {
         $this->hostName = $hostName;
     }
@@ -29,14 +29,14 @@ class PreConverter implements XmlTextConverter
         $this->hostName = $hostName;
     }
 
-    public function convert( DOMDocument $xmlDoc )
+    public function convert(DOMDocument $xmlDoc)
     {
         $xpath = new DOMXPath($xmlDoc);
         /** @var \DOMElement $customNode */
-        foreach($xpath->query("//custom[@name='ezmaform']") as $customNode)
-        {
+        foreach ($xpath->query("//custom[@name='ezmaform']") as $customNode) {
             $customNode->setAttribute('custom:hostname', $this->hostName);
         }
+
         return null;
     }
 }

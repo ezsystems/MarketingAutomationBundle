@@ -28,9 +28,9 @@ class EzSystemsMarketingAutomationExtension extends Extension implements Prepend
 
     public function prepend(ContainerBuilder $container)
     {
-        $configFile = __DIR__ . '/../Resources/config/ezpublish.yml';
-        $config = Yaml::parse( file_get_contents( $configFile ) );
-        $container->prependExtensionConfig( 'ezpublish', $config );
-        $container->addResource( new FileResource( $configFile ) );
+        $configFile = __DIR__.'/../Resources/config/ezpublish.yml';
+        $config = Yaml::parse(file_get_contents($configFile));
+        $container->prependExtensionConfig('ezpublish', $config);
+        $container->addResource(new FileResource($configFile));
     }
 }

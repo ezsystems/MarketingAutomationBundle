@@ -28,7 +28,7 @@ class TrackerListener implements EventSubscriberInterface
      * @param bool $isEnabled
      * @param string $installationId Marketing Automation installation ID
      */
-    public function __construct( $isEnabled, $installationId )
+    public function __construct($isEnabled, $installationId)
     {
         $this->installationId = $installationId;
         $this->isEnabled = $isEnabled;
@@ -37,7 +37,7 @@ class TrackerListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            KernelEvents::RESPONSE => array( 'onKernelResponse' )
+            KernelEvents::RESPONSE => array( 'onKernelResponse' ),
         );
     }
 
@@ -47,7 +47,7 @@ class TrackerListener implements EventSubscriberInterface
             return;
         }
 
-        if (stripos( $e->getResponse()->getContent(), '</body>' ) === false) {
+        if (stripos($e->getResponse()->getContent(), '</body>') === false) {
             return;
         }
 
@@ -62,8 +62,7 @@ class TrackerListener implements EventSubscriberInterface
 </script>
 EOT;
         $e->getResponse()->setContent(
-            str_ireplace( '</body>', $scriptCode . '</body>', $e->getResponse()->getContent() )
+            str_ireplace('</body>', $scriptCode.'</body>', $e->getResponse()->getContent())
         );
     }
-
 }

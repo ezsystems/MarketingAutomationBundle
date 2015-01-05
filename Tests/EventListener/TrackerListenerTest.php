@@ -23,12 +23,12 @@ class TrackerListenerTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->listener = new TrackerListener( self::INSTALLATION_ID );
+        $this->listener = new TrackerListener(self::INSTALLATION_ID);
     }
 
     public function testOnKernelResponse()
     {
-        $response = new Response( '<html><body></body></html>');
+        $response = new Response('<html><body></body></html>');
         $e = $this->createFilterResponseEvent($response);
         $this->listener->onKernelResponse($e);
 
@@ -40,7 +40,7 @@ class TrackerListenerTest extends PHPUnit_Framework_TestCase
 
     public function testOnKernelResponseNoBodyTag()
     {
-        $response = new Response( '<div>');
+        $response = new Response('<div>');
         $e = $this->createFilterResponseEvent($response);
         $this->listener->onKernelResponse($e);
 
@@ -56,13 +56,13 @@ class TrackerListenerTest extends PHPUnit_Framework_TestCase
      *
      * @return \Symfony\Component\HttpKernel\Event\FilterResponseEvent
      */
-    protected function createFilterResponseEvent( $response, $requestType = HttpKernelInterface::MASTER_REQUEST )
+    protected function createFilterResponseEvent($response, $requestType = HttpKernelInterface::MASTER_REQUEST)
     {
         return new FilterResponseEvent(
-            $this->getMock( 'Symfony\Component\HttpKernel\HttpKernelInterface' ),
+            $this->getMock('Symfony\Component\HttpKernel\HttpKernelInterface'),
             new Request(),
             $requestType,
             $response
         );
-}
+    }
 }

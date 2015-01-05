@@ -22,7 +22,7 @@ class ConfigResolverAwareFactory
     /**
      * @param \eZ\Publish\Core\MVC\ConfigResolverInterface $configResolver
      */
-    public function __construct( ConfigResolverInterface $configResolver )
+    public function __construct(ConfigResolverInterface $configResolver)
     {
         $this->configResolver = $configResolver;
     }
@@ -33,15 +33,15 @@ class ConfigResolverAwareFactory
     public function buildTrackerListener()
     {
         return new TrackerListener(
-            $this->configResolver->getParameter( 'TrackingSettings.AutomaticTracking', 'ezma' ) === 'enabled',
-            $this->configResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
+            $this->configResolver->getParameter('TrackingSettings.AutomaticTracking', 'ezma') === 'enabled',
+            $this->configResolver->getParameter('TrackingSettings.InstallationId', 'ezma')
         );
     }
 
     public function buildCustomTagConverter()
     {
         return new PreConverter(
-            $this->configResolver->getParameter( 'FormSettings.Hostname', 'ezma' )
+            $this->configResolver->getParameter('FormSettings.Hostname', 'ezma')
         );
     }
 }
