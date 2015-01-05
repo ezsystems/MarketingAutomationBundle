@@ -9,6 +9,7 @@ namespace EzSystems\MarketingAutomationBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
@@ -42,7 +43,11 @@ class TrackerListener implements EventSubscriberInterface
 
     public function onKernelResponse(FilterResponseEvent $e)
     {
-        if ( !$this->isEnabled ) {
+        if (!$this->isEnabled && $e->getRequestType() !== HttpKernelInterface::MASTER_REQUEST) {
+            return;
+        }
+
+        if (stripos( $e->getResponse()->getContent(), '</body>' ) === false) {
             return;
         }
 

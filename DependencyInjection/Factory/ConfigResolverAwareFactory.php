@@ -9,6 +9,7 @@ namespace EzSystems\MarketingAutomationBundle\DependencyInjection\Factory;
 
 use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use EzSystems\MarketingAutomationBundle\EventListener\TrackerListener;
+use EzSystems\MarketingAutomationBundle\eZ\XmlText\PreConverter;
 
 /**
  * Factory for services that depend on a legacy configuration variable
@@ -34,6 +35,13 @@ class ConfigResolverAwareFactory
         return new TrackerListener(
             $this->configResolver->getParameter( 'TrackingSettings.AutomaticTracking', 'ezma' ) === 'enabled',
             $this->configResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
+        );
+    }
+
+    public function buildCustomTagConverter()
+    {
+        return new PreConverter(
+            $this->configResolver->getParameter( 'FormSettings.Hostname', 'ezma' )
         );
     }
 }

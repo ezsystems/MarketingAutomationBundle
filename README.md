@@ -33,3 +33,6 @@ See the LICENSE file that ships at the root of this bundle.
 
 ### Automatic tracker code integration
 The Marketing Automation tracking code will automatically be added before the closing body tag.
+
+### XmlText custom tag
+Marketing Automation forms in XmlText fields will be rendered through the new stack.
