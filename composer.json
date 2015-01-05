@@ -8,6 +8,6 @@
         }
     ],
     "autoload": {
-        "psr-4": { "EzSystems\\MarketingAutomationBundle": "" }
+        "psr-4": { "EzSystems\\MarketingAutomationBundle\\": "" }
     }
 }
