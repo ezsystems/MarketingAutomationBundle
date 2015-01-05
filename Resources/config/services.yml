@@ -1,4 +1,11 @@
 services:
-#    ez_systems_marketing_automation.example:
-#        class: EzSystems\MarketingAutomationBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    ez_marketing_automation.tracker_listener:
+        class: EzSystems\MarketingAutomationBundle\EventListener\TrackerListener
+        factory_service: ez_marketing_automation.legacy_config_resolver_aware_factory
+        factory_method: buildTrackerListener
+        tags:
+            - { name: kernel.event_subscriber }
+
+    ez_marketing_automation.legacy_config_resolver_aware_factory:
+        class: EzSystems\MarketingAutomationBundle\DependencyInjection\Factory\ConfigResolverAwareFactory
+        arguments: [@ezpublish_legacy.config.resolver]
