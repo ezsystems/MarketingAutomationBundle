@@ -12,7 +12,7 @@ See the LICENSE file that ships at the root of this bundle.
 ```
 {
     "require": {
-        "ezsystems/marketing-automation-bundle": "dev-master",
+        "ezsystems/marketing-automation-bundle": "~0.1@beta",
         ...
     },
     ...
