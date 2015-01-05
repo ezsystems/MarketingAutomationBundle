@@ -32,6 +32,7 @@ class ConfigResolverAwareFactory
     public function buildTrackerListener()
     {
         return new TrackerListener(
+            $this->configResolver->getParameter( 'TrackingSettings.AutomaticTracking', 'ezma' ) === 'enabled',
             $this->configResolver->getParameter( 'TrackingSettings.InstallationId', 'ezma' )
         );
     }

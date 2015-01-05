@@ -20,12 +20,17 @@ class TrackerListener implements EventSubscriberInterface
     /** @var string */
     private $installationId;
 
+    /** @var bool */
+    private $isEnabled;
+
     /**
+     * @param bool $isEnabled
      * @param string $installationId Marketing Automation installation ID
      */
-    public function __construct( $installationId )
+    public function __construct( $isEnabled, $installationId )
     {
         $this->installationId = $installationId;
+        $this->isEnabled = $isEnabled;
     }
 
     public static function getSubscribedEvents()
@@ -37,7 +42,9 @@ class TrackerListener implements EventSubscriberInterface
 
     public function onKernelResponse(FilterResponseEvent $e)
     {
-        $installationId = "@todo";
+        if ( !$this->isEnabled ) {
+            return;
+        }
 
         $scriptCode = <<<EOT
 <script id="__maSrc" type="text/javascript" data-pid="{$this->installationId}">
