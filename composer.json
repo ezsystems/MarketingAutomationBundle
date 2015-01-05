@@ -7,5 +7,7 @@
             "email": "dev-team@ez.no"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": { "EzSystems\\MarketingAutomationBundle": "" }
+    }
 }
