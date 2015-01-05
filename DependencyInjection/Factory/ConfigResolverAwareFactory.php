@@ -9,6 +9,7 @@ namespace EzSystems\MarketingAutomationBundle\DependencyInjection\Factory;
 
 use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use EzSystems\MarketingAutomationBundle\EventListener\TrackerListener;
+use EzSystems\MarketingAutomationBundle\eZ\XmlText\PreConverter;
 
 /**
  * Factory for services that depend on a legacy configuration variable
