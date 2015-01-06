@@ -3,4 +3,4 @@ system:
         fieldtypes:
             ezxml:
                 custom_tags:
-                    - { path: "%kernel.root_dir%/../src/EzSystems/MarketingAutomationBundle/Resources/views/xmltext/custom_tag.xsl" }
+                    - { path: "%kernel.root_dir%/../vendor/ezsystems/marketing-automation-bundle/Resources/views/xmltext/custom_tag.xsl" }
