@@ -8,7 +8,7 @@ services:
 
     ez_marketing_automation.legacy_config_resolver_aware_factory:
         class: EzSystems\MarketingAutomationBundle\DependencyInjection\Factory\ConfigResolverAwareFactory
-        arguments: [@ezpublish_legacy.config.resolver]
+        arguments: [@ezpublish.config.resolver]
 
     ez_marketing_automation.ezxml.pre_converter.form_custom_tag:
         lazy: true
