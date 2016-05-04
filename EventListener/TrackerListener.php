@@ -43,7 +43,7 @@ class TrackerListener implements EventSubscriberInterface
 
     public function onKernelResponse(FilterResponseEvent $e)
     {
-        if (!$this->isEnabled && $e->getRequestType() !== HttpKernelInterface::MASTER_REQUEST) {
+        if (!$this->isEnabled || $e->getRequestType() !== HttpKernelInterface::MASTER_REQUEST) {
             return;
         }
 
