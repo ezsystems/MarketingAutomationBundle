@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the EzSystemsMarketingAutomationBundle package
+ * This file is part of the EzSystemsMarketingAutomationBundle package.
  *
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
@@ -37,7 +37,7 @@ class TrackerListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            KernelEvents::RESPONSE => array( 'onKernelResponse' ),
+            KernelEvents::RESPONSE => array('onKernelResponse'),
         );
     }
 
@@ -62,7 +62,7 @@ class TrackerListener implements EventSubscriberInterface
 </script>
 EOT;
         $e->getResponse()->setContent(
-            str_ireplace('</body>', $scriptCode.'</body>', $e->getResponse()->getContent())
+            str_ireplace('</body>', $scriptCode . '</body>', $e->getResponse()->getContent())
         );
     }
 }
