@@ -1,6 +1,10 @@
 {
     "name": "ezsystems/marketing-automation-bundle",
     "description": "eZ Platform Marketing Automation",
+    "require":
+    {
+        "ezsystems/ezpublish-kernel": "^5.0 | ^6.0"
+    },
     "authors": [
         {
             "name": "eZ Systems",
@@ -9,5 +13,8 @@
     ],
     "autoload": {
         "psr-4": { "EzSystems\\MarketingAutomationBundle\\": "" }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.7"
     }
 }
