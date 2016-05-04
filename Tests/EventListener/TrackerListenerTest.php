@@ -23,7 +23,7 @@ class TrackerListenerTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->listener = new TrackerListener(self::INSTALLATION_ID);
+        $this->listener = new TrackerListener(true, self::INSTALLATION_ID);
     }
 
     public function testOnKernelResponse()
