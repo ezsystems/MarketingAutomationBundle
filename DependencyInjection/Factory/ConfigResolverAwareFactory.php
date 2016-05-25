@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the EzSystemsMarketingAutomationBundle package
+ * This file is part of the EzSystemsMarketingAutomationBundle package.
  *
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
@@ -12,7 +12,7 @@ use EzSystems\MarketingAutomationBundle\EventListener\TrackerListener;
 use EzSystems\MarketingAutomationBundle\eZ\XmlText\PreConverter;
 
 /**
- * Factory for services that depend on a legacy configuration variable
+ * Factory for services that depend on a legacy configuration variable.
  */
 class ConfigResolverAwareFactory
 {
