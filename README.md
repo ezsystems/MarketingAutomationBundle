@@ -1,5 +1,7 @@
 # eZ Platform Marketing Automation Bundle
 
+[![Build Status](https://travis-ci.org/ezsystems/MarketingAutomationBundle.svg?branch=master)](https://travis-ci.org/ezsystems/MarketingAutomationBundle)
+
 This bundle integrates [Net-Result’s marketing automation](http://www.net-results.com/) suite into the eZ Publish
 Platform.
 
