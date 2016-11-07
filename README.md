@@ -1,5 +1,7 @@
 # eZ Platform Marketing Automation Bundle
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/531e83d6-ced2-45a3-8abb-8574da4a4e44/big.png)](https://insight.sensiolabs.com/projects/531e83d6-ced2-45a3-8abb-8574da4a4e44)
+
 [![Build Status](https://travis-ci.org/ezsystems/MarketingAutomationBundle.svg?branch=master)](https://travis-ci.org/ezsystems/MarketingAutomationBundle)
 
 This bundle integrates [Net-Result’s marketing automation](http://www.net-results.com/) suite into the eZ Publish
