@@ -1,6 +1,7 @@
 {
     "name": "ezsystems/marketing-automation-bundle",
     "description": "eZ Platform Marketing Automation",
+    "license": "GPL-2.0",
     "require":
     {
         "ezsystems/ezpublish-kernel": "^5.0 | ^6.0"
