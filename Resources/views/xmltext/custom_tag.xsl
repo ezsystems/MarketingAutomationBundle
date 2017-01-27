@@ -18,7 +18,7 @@
             </xsl:attribute>
             <script type="text/javascript" src="">
                 <xsl:attribute name="src">
-                    <xsl:value-of select="concat('http://', @custom:hostname, '/', @custom:form_id, '/form.js')"></xsl:value-of>
+                    <xsl:value-of select="concat('//', @custom:hostname, '/', @custom:form_id, '/form.js')"></xsl:value-of>
                 </xsl:attribute>
             </script>
         </div>
